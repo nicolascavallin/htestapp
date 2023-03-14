@@ -6,7 +6,7 @@ on:
       hash:
         description: 'Commit hash to release.'
         required: false
-        default: 'HEAD'
+        default: ''
       bump:
         description: 'Choose your version bump.'
         required: true
