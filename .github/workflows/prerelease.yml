@@ -31,7 +31,11 @@ jobs:
         with:
           fetch-depth: '0'
           token: ${{ env.GH_TOKEN }}
-          ref: ${{ github.event.inputs.hash }}
+
+      - name: Specific Commit
+        if: ${{ ne(github.event.inputs.hash, '') }}
+        run: |
+          git reset --hard ${{ github.event.inputs.hash }}
 
       - name: Check branch
         run: |
