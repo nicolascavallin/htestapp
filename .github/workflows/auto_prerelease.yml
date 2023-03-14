@@ -13,7 +13,7 @@ jobs:
   run-build-on-bitrise:
     name: Pre-release
     runs-on: ubuntu-latest
-    if: "!github.event.created || github.event.sender.login != 'h-bot-mobile'"
+    if: "github.event.sender.login != 'h-bot-mobile'"
     steps:
       - name: Checkout Git Repo
         uses: actions/checkout@v3
