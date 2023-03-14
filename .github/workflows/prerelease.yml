@@ -59,4 +59,4 @@ jobs:
 
       - name: Bump version
         run: |
-          yarn release ${{ inputs.bump }} --preRelease=rc --config .release-it.pre.json --ci
+          yarn release --preRelease --config .release-it.pre.json --ci
