@@ -13,6 +13,7 @@ jobs:
   run-build-on-bitrise:
     name: Pre-release
     runs-on: ubuntu-latest
+    if: ${{ github.event_name }} == 'push' && ${{ github.event.created_at }} != ${{ github.event.head_commit.timestamp }}
     steps:
       - name: Checkout Git Repo
         uses: actions/checkout@v3
@@ -48,4 +49,4 @@ jobs:
             bump="major"
           fi
 
-          yarn release $bump --preRelease=rc --config .release-it.auto.json --ci
+          yarn release --preRelease --config .release-it.auto.json --ci
