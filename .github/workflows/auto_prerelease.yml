@@ -3,7 +3,7 @@ name: Auto Pre-release
 on:
   push:
     branches:
-      - main
+      - release/*
 
 env:
   BRANCH_NAME: ${{ github.ref_name }}
