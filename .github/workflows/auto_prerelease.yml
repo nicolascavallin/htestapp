@@ -13,7 +13,7 @@ jobs:
   run-build-on-bitrise:
     name: Pre-release
     runs-on: ubuntu-latest
-    if: "github.actor != 'h-bot-mobile'"
+    if: "github.actor != 'AlbertoLinares'"
     steps:
       - name: Checkout Git Repo
         uses: actions/checkout@v3
@@ -27,5 +27,28 @@ jobs:
           # yarn lint
           # yarn test:unit
 
-          echo ${{ github.actor }}
-          echo ${{ github }}
+      - name: Setup Git
+        run: |
+          git config --global user.email "116092959+h-bot-mobile@users.noreply.github.com"
+          git config --global user.name "h-bot-mobile"
+
+      - name: Bump version
+        run: |
+          # Extract version number from input string
+          version=$(echo "${{ github.ref_name }}" | grep -oE '[0-9]+\.[0-9]+\.[0-9]+')
+
+          # Split version number into three components
+          major=$(echo $version | cut -d. -f1)
+          minor=$(echo $version | cut -d. -f2)
+          patch=$(echo $version | cut -d. -f3)
+
+          # Determine type of bump based on version components
+          if [[ $patch -gt 0 ]]; then
+            bump="patch"
+          elif [[ $minor -gt 0 ]]; then
+            bump="minor"
+          else
+            bump="major"
+          fi
+
+          yarn release --preRelease --config .release-it.auto.json --ci
