@@ -13,7 +13,7 @@ jobs:
   run-build-on-bitrise:
     name: Pre-release
     runs-on: ubuntu-latest
-    if: "github.actor != 'h-bot-mobile'"
+    if: "github.actor != 'github-actions[bot]'"
     steps:
       - name: Checkout Git Repo
         uses: actions/checkout@v3
