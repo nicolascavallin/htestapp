@@ -54,7 +54,7 @@ jobs:
       - name: Setup Git
         run: |
           git config --global user.email "bot-mobile@users.noreply.github.com"
-          git config --global user.name "bot-mobile"
+          git config --global user.name "h-bot-mobile"
           git config --global --add --bool push.autoSetupRemote true
 
       - name: Bump version
