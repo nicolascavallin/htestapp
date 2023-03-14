@@ -23,7 +23,7 @@ env:
 
 jobs:
   run-build-on-bitrise:
-    name: Release
+    name: Pre-release
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Git Repo
