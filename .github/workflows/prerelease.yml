@@ -1,0 +1,62 @@
+name: Pre-release
+
+on:
+  workflow_dispatch:
+    inputs:
+      hash:
+        description: 'Commit hash to release.'
+        required: false
+        default: ''
+      bump:
+        description: 'Choose your version bump.'
+        required: true
+        default: 'patch'
+        type: choice
+        options:
+          - patch
+          - minor
+          - major
+
+env:
+  BRANCH_NAME: ${{ github.ref_name }}
+  GH_TOKEN: ${{ secrets.GH_AUTH_TOKEN }}
+
+jobs:
+  run-build-on-bitrise:
+    name: Pre-release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Git Repo
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: '0'
+          token: ${{ env.GH_TOKEN }}
+
+      - name: Specific Commit
+        if: ${{ github.event.inputs.hash != '' }}
+        run: |
+          git reset --hard ${{ github.event.inputs.hash }}
+
+      - name: Check branch
+        run: |
+          if [ "${{ env.BRANCH_NAME }}" != "develop" ]; then
+            echo "Branch name is not develop"
+            exit 1
+          fi
+
+      - name: Install libraries and run linters and unit tests
+        run: |
+          yarn install
+          # yarn typecheck
+          # yarn lint
+          # yarn test:unit
+
+      - name: Setup Git
+        run: |
+          git config --global user.email "116092959+h-bot-mobile@users.noreply.github.com"
+          git config --global user.name "h-bot-mobile"
+          git config --global --add --bool push.autoSetupRemote true
+
+      - name: Bump version
+        run: |
+          yarn release ${{ inputs.bump }} --preRelease=rc --config .release-it.pre.json --ci
