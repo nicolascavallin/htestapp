@@ -1,0 +1,46 @@
+{
+  "github": {
+    "release": false,
+    "tokenRef": "GH_TOKEN"
+  },
+  "hooks": {
+    "after:bump": "version_string=$(echo \"${version}\" | sed -E 's/([0-9]+\\.[0-9]+\\.[0-9]+).*$/\\1/') && yarn react-native-version --never-amend && git checkout -b release/$version_string",
+    "after:release": "version_string=$(echo \"${version}\" | sed -E 's/([0-9]+\\.[0-9]+\\.[0-9]+).*$/\\1/') && gh pr create --base develop --head release/$version_string --title 'Release ${version}' --body 'Release ${version}'"
+  },
+  "git": {
+    "push": true,
+    "commitMessage": "chore: Release v${version}",
+    "tag": false
+  },
+  "plugins": {
+    "@release-it/conventional-changelog": {
+      "header": "# Changelog",
+      "preset": {
+        "name": "conventionalcommits",
+        "types": [
+          {
+            "type": "feat",
+            "section": "Features"
+          },
+          {
+            "type": "fix",
+            "section": "Bug Fixes"
+          },
+          {
+            "type": "chore",
+            "section": "Chore"
+          },
+          {
+            "type": "docs",
+            "section": "Documentation"
+          },
+          {
+            "type": "",
+            "section": "Others"
+          }
+        ]
+      },
+      "infile": "CHANGELOG.md"
+    }
+  }
+}
