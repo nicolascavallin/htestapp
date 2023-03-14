@@ -1,0 +1,56 @@
+# Changelog
+
+### 0.0.2 (2023-03-14)
+
+
+### Others
+
+* release action 4 ([99843ca](https://github.com/nicolascavallin/htestapp/commit/99843ca4fdbd99a1d3a35672269775b13e248124))
+* release action 3 ([c3e7d96](https://github.com/nicolascavallin/htestapp/commit/c3e7d9641d71f3e8aaf60cb7d34ce016ed927c03))
+* release action 2 ([8e54889](https://github.com/nicolascavallin/htestapp/commit/8e548891f898c45139878a27ab816a7ea476d34d))
+* release action ([7ed9775](https://github.com/nicolascavallin/htestapp/commit/7ed977523701c74046f5ea304c5349b0bb3aef9e))
+* release 7 ([ca84f38](https://github.com/nicolascavallin/htestapp/commit/ca84f389c59764c074ce650fd707c7d4f311246b))
+* release 6 ([c79401a](https://github.com/nicolascavallin/htestapp/commit/c79401a3966a5c8bd457ee11312902531ac51d3a))
+* release 5 ([8c41e8b](https://github.com/nicolascavallin/htestapp/commit/8c41e8b0b42b81994e2c437d2e5a0e0d0ad8ef77))
+* release 4 ([4cb7fe3](https://github.com/nicolascavallin/htestapp/commit/4cb7fe38c42ebe3293ddb507739bfbb9e4a859c4))
+* last update release 4 ([1658105](https://github.com/nicolascavallin/htestapp/commit/1658105ce705679cc458195fe8d845716f9200fe))
+* last update release 3 ([f938b83](https://github.com/nicolascavallin/htestapp/commit/f938b8332598b877d6878347065b93728dd9c5f9))
+* last update release 2 ([6c3f505](https://github.com/nicolascavallin/htestapp/commit/6c3f5059b37222e1909cbc3e77ccd2867b5264aa))
+* last update release ([0ef7814](https://github.com/nicolascavallin/htestapp/commit/0ef78146b07368cb6b206445c1d5b5b1ff8c723a))
+* release 3 ([cf9bfe6](https://github.com/nicolascavallin/htestapp/commit/cf9bfe64b7e80b4c74bba39bd63792aaeac24d28))
+* release 2 ([f1a05e6](https://github.com/nicolascavallin/htestapp/commit/f1a05e611ce9bf8b0fe62050a5e35efe119196b3))
+* release ([03e17f0](https://github.com/nicolascavallin/htestapp/commit/03e17f0ebc9b8cf66814267c6ee4dc3773b5e38a))
+* internal test ([eae9dce](https://github.com/nicolascavallin/htestapp/commit/eae9dcece117626c809a18794b7f9ffe0b8b06cd))
+* things ([8036cb1](https://github.com/nicolascavallin/htestapp/commit/8036cb1637afe20a1a6d65f79dcb1168d846dc17))
+* auto pre release ([d7f8786](https://github.com/nicolascavallin/htestapp/commit/d7f878655da85e9bb6bcf8d570be10e558044d38))
+* pre-release 18 ([d8ef21a](https://github.com/nicolascavallin/htestapp/commit/d8ef21a70e3fa5242e20ed93df31e5919d3158a0))
+* commit extra 4 ([9403179](https://github.com/nicolascavallin/htestapp/commit/940317956b0eba5703279ae59f74a4cf7831d1dd))
+* pre-release 17 ([7aec1da](https://github.com/nicolascavallin/htestapp/commit/7aec1dadd9b456cb5354c096ab8b9615890bf90d))
+* commit extra 3 ([163ceec](https://github.com/nicolascavallin/htestapp/commit/163ceec75c193f04872163de170f069ceddb6698))
+* pre-release 16 ([f6bc679](https://github.com/nicolascavallin/htestapp/commit/f6bc679090a15a40630680ee18fd1c28138eefe3))
+* commit extra 2 ([9cec338](https://github.com/nicolascavallin/htestapp/commit/9cec338d443b79afd154df8f268d631fad7804f9))
+* pre-release 15 ([d387736](https://github.com/nicolascavallin/htestapp/commit/d38773664fbd0b6a29ccee6444201f75240b30d8))
+* commit extra ([126f81f](https://github.com/nicolascavallin/htestapp/commit/126f81fd8c1b335bddc77583f7ecb705bc82a478))
+* pre-release 14 ([e5eb256](https://github.com/nicolascavallin/htestapp/commit/e5eb2564de8a09b87b2d06a84e8e51ac3e130f3b))
+* pre-release 13 ([1bbb98e](https://github.com/nicolascavallin/htestapp/commit/1bbb98e1f2d1717af90e8ebd6871653255cac18c))
+* extra commit ([2d26b72](https://github.com/nicolascavallin/htestapp/commit/2d26b7237cc532777308a0e52fea055b8be2f6db))
+* pre-release 12 ([0cc47b1](https://github.com/nicolascavallin/htestapp/commit/0cc47b1c6df2df113e64b56dd38d03224e709818))
+* pre-release 11 ([cbc52d0](https://github.com/nicolascavallin/htestapp/commit/cbc52d07c53001c57e5b2cdbea908125d7b4df42))
+* pre-release 10 ([152c95b](https://github.com/nicolascavallin/htestapp/commit/152c95b2fa6899d5602d1d0fb29551043115ff70))
+* pre-release 9 ([4f2a3d0](https://github.com/nicolascavallin/htestapp/commit/4f2a3d0386b67d9f52ade5327fd2f458a4f995f7))
+* pre-release 8 ([6a09a58](https://github.com/nicolascavallin/htestapp/commit/6a09a5884f188971e0743197ec4e030294264ad6))
+* pre-release 7 ([d35854c](https://github.com/nicolascavallin/htestapp/commit/d35854cdfd462dd08435efd2011ca361ceb919a8))
+* pre-release 6 ([dd75ed4](https://github.com/nicolascavallin/htestapp/commit/dd75ed43deced0d5434f63b08228d3892aded844))
+* pre-release 5 ([7232c3a](https://github.com/nicolascavallin/htestapp/commit/7232c3a8c02a19ca1235676e43bcf07b1942bf54))
+* pre-release 4 ([8c3e894](https://github.com/nicolascavallin/htestapp/commit/8c3e894b677df474eb11f3e2e37d3cff4dcc0393))
+* pre-release 3 ([73f6144](https://github.com/nicolascavallin/htestapp/commit/73f6144935ee8f699cd788bc6f15440c65985783))
+* pre-release 2 ([c67bb41](https://github.com/nicolascavallin/htestapp/commit/c67bb414e9f977a18afbb95ba471251a69c664f0))
+* pre-release 1 ([e5926a8](https://github.com/nicolascavallin/htestapp/commit/e5926a896a749fe90b5f25670cea400a1ebf33f4))
+* pre-release ([e4e3f7e](https://github.com/nicolascavallin/htestapp/commit/e4e3f7e23049534f990232c01817a963a2781c30))
+* basic settings ([d254157](https://github.com/nicolascavallin/htestapp/commit/d2541573874d410dd351b99e8aec6bb6641d48e0))
+* first commit ([af4f008](https://github.com/nicolascavallin/htestapp/commit/af4f0085cc4a4716f83f10f6732022ceb64cda8a))
+
+
+### Chore
+
+* Release v0.0.2-rc.0 ([6828289](https://github.com/nicolascavallin/htestapp/commit/68282890440f77d60404d17f7839087a3e2f3af2))
