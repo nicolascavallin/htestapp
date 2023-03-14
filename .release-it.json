@@ -5,7 +5,7 @@
   },
   "hooks": {
     "after:bump": "version_string=$(echo \"${version}\" | sed -E 's/([0-9]+\\.[0-9]+\\.[0-9]+).*$/\\1/') && yarn react-native-version --never-amend && git checkout -b release/$version_string",
-    "after:git:push": "version_string=$(echo \"${version}\" | sed -E 's/([0-9]+\\.[0-9]+\\.[0-9]+).*$/\\1/') && gh pr create --base develop --head release/$version_string --title 'Release $version_string' --body 'Release $version_string' && gh pr create --base master --head release/$version_string --title 'Release $version_string' --body 'Release $version_string'"
+    "after:git": "version_string=$(echo \"${version}\" | sed -E 's/([0-9]+\\.[0-9]+\\.[0-9]+).*$/\\1/') && gh pr create --base develop --head release/$version_string --title 'Release $version_string' --body 'Release $version_string' && gh pr create --base master --head release/$version_string --title 'Release $version_string' --body 'Release $version_string'"
   },
   "git": {
     "push": true,
