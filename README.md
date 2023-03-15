@@ -1,6 +1,1 @@
-This is a new feature
-This is a new feature
-This is a new feature
-This is a new feature
-This is a new feature
-This is a new feature
+Feature 1
