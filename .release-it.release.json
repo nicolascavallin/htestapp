@@ -9,7 +9,7 @@
   },
   "git": {
     "push": true,
-    "commitMessage": "chore: Release v${version}",
+    "commitMessage": "release: Release v${version}",
     "tag": true
   },
   "plugins": {
@@ -37,6 +37,14 @@
           {
             "type": "",
             "section": "Others"
+          },
+          {
+            "type": "prerelease",
+            "hidden": true
+          },
+          {
+            "type": "release",
+            "hidden": true
           }
         ]
       },

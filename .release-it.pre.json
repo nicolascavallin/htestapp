@@ -1,6 +1,6 @@
 {
   "github": {
-    "release": false,
+    "release": true,
     "tokenRef": "GH_TOKEN"
   },
   "hooks": {
@@ -8,7 +8,7 @@
   },
   "git": {
     "push": true,
-    "commitMessage": "chore: Release v${version}",
-    "tag": false
+    "commitMessage": "prerelease: v${version}",
+    "tag": true
   }
 }
