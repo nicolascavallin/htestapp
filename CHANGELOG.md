@@ -1,5 +1,7 @@
 # Changelog
 
+## [2.0.0](https://github.com/nicolascavallin/htestapp/compare/2.0.0-rc.0...2.0.0) (2023-03-15)
+
 ## [1.0.0](https://github.com/nicolascavallin/htestapp/compare/1.0.0-rc.0...1.0.0) (2023-03-15)
 
 ## 0.1.0 (2023-03-15)
