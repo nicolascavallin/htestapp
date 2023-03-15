@@ -20,7 +20,14 @@ jobs:
         with:
           token: ${{ env.GH_TOKEN }}
 
+      - name: Check package.json version
+        run: |
+          if [[ "jq -r '.version' package.json" =~ '-' ]]; then
+            echo "is_prerelease=true" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Install libraries and run linters and unit tests
+        if: ${{ env.is_prerelease == 'true' }}
         run: |
           yarn install
           # yarn typecheck
@@ -28,11 +35,13 @@ jobs:
           # yarn test:unit
 
       - name: Setup Git
+        if: ${{ env.is_prerelease == 'true' }}
         run: |
           git config --global user.email "116092959+h-bot-mobile@users.noreply.github.com"
           git config --global user.name "h-bot-mobile"
 
       - name: Bump version
+        if: ${{ env.is_prerelease == 'true' }}
         run: |
           # Extract version number from input string
           version=$(echo "${{ github.ref_name }}" | grep -oE '[0-9]+\.[0-9]+\.[0-9]+')
