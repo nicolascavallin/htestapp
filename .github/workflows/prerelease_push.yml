@@ -1,6 +1,9 @@
-name: Release
+name: Pre-release push
 
-on: workflow_dispatch
+on:
+  push:
+    branches:
+      - release/*
 
 env:
   BRANCH_NAME: ${{ github.ref_name }}
@@ -8,28 +11,23 @@ env:
 
 jobs:
   run-build-on-bitrise:
-    name: Release
+    name: Pre-release push
     runs-on: ubuntu-latest
+    if: "github.actor != 'AlbertoLinares'"
     steps:
       - name: Checkout Git Repo
         uses: actions/checkout@v3
         with:
-          fetch-depth: '0'
           token: ${{ env.GH_TOKEN }}
 
-      - name: Specific Commit
-        if: ${{ github.event.inputs.hash != '' }}
+      - name: Check package.json version
         run: |
-          git reset --hard ${{ github.event.inputs.hash }}
-
-      - name: Check branch
-        run: |
-          if [ "${{ env.BRANCH_NAME }}" =~ "release/" ]; then
-            echo "Origin branch must be a release/* one"
-            exit 1
+          if [[ "jq -r '.version' package.json" =~ '-' ]]; then
+            echo "is_prerelease=true" >> "$GITHUB_OUTPUT"
           fi
 
       - name: Install libraries and run linters and unit tests
+        if: ${{ env.is_prerelease == 'true' }}
         run: |
           yarn install
           yarn typecheck
@@ -37,11 +35,12 @@ jobs:
           yarn test:unit
 
       - name: Setup Git
+        if: ${{ env.is_prerelease == 'true' }}
         run: |
           git config --global user.email "116092959+h-bot-mobile@users.noreply.github.com"
           git config --global user.name "h-bot-mobile"
-          git config --global --add --bool push.autoSetupRemote true
 
       - name: Bump version
+        if: ${{ env.is_prerelease == 'true' }}
         run: |
-          yarn release --config .release-it.release.json --ci
+          yarn release --preRelease --config .release-it.pre-push.json --ci

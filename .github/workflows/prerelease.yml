@@ -47,9 +47,9 @@ jobs:
       - name: Install libraries and run linters and unit tests
         run: |
           yarn install
-          # yarn typecheck
-          # yarn lint
-          # yarn test:unit
+          yarn typecheck
+          yarn lint
+          yarn test:unit
 
       - name: Setup Git
         run: |
