@@ -14,41 +14,7 @@
   },
   "plugins": {
     "@release-it/conventional-changelog": {
-      "header": "# Changelog",
-      "preset": {
-        "name": "conventionalcommits",
-        "types": [
-          {
-            "type": "feat",
-            "section": "Features"
-          },
-          {
-            "type": "fix",
-            "section": "Bug Fixes"
-          },
-          {
-            "type": "chore",
-            "section": "Chore"
-          },
-          {
-            "type": "docs",
-            "section": "Documentation"
-          },
-          {
-            "type": "",
-            "section": "Others"
-          },
-          {
-            "type": "prerelease",
-            "hidden": true
-          },
-          {
-            "type": "release",
-            "hidden": true
-          }
-        ]
-      },
-      "infile": "CHANGELOG.md"
+      "filename": "CHANGELOG.md"
     }
   }
 }
