@@ -9,7 +9,6 @@
   },
   "git": {
     "push": true,
-    "commit": true,
     "commitMessage": "release: Release v${version}",
     "tag": true
   },
