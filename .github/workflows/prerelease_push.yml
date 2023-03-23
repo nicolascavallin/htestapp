@@ -40,10 +40,14 @@ jobs:
       - name: Setup Git
         if: ${{ env.is_prerelease == 'true' }}
         run: |
-          git config --global user.email "116092959+h-bot-mobile@users.noreply.github.com"
-          git config --global user.name "h-bot-mobile"
+          git config user.name "${GITHUB_ACTOR}"
+          git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
 
       - name: Bump version
         if: ${{ env.is_prerelease == 'true' }}
         run: |
           yarn release --preRelease --config .release-it.pre-push.json --ci
+
+      - name: Bitrise Build Production
+        run: |
+          echo "Triggering Bitrise build for production"
