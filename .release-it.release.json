@@ -12,7 +12,8 @@
   "git": {
     "push": true,
     "commitMessage": "release: v${version}",
-    "requireCleanWorkingDir": false
+    "requireCleanWorkingDir": false,
+    "requireUpstream": true
   },
   "plugins": {
     "@release-it/conventional-changelog": {
