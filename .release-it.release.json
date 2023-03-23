@@ -11,6 +11,6 @@
     "push": true,
     "commitMessage": "Release v${version}",
     "tag": true,
-    "changelog": "npx auto-changelog --stdout --commit-limit false -u --template keepachangelog"
+    "changelog": "npx auto-changelog --stdout --commit-limit false -u"
   }
 }
