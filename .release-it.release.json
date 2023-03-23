@@ -1,6 +1,7 @@
 {
   "github": {
     "release": true,
+    "autoGenerate": true,
     "tokenRef": "GH_TOKEN"
   },
   "hooks": {
