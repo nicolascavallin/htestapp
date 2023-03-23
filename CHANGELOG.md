@@ -1,5 +1,18 @@
 
 
+## [4.0.0](https://github.com/nicolascavallin/htestapp/compare/3.0.0...4.0.0) (2023-03-23)
+
+
+### Other PRs
+
+* exclusive hotfix of release ([2c3e2de](https://github.com/nicolascavallin/htestapp/commit/2c3e2deb50a8761983bdb336c45e5c44cd3b38b2))
+* feature 3 4.0 ([3fe41ed](https://github.com/nicolascavallin/htestapp/commit/3fe41edea0405bbb7b9c6e6389ec356159f3f5e7))
+* feature 2 4.0 ([bc6c6ea](https://github.com/nicolascavallin/htestapp/commit/bc6c6eae20b600477bf2a7dd17d69f1c48fec43f))
+* feature 1 4.0 ([8d72d2e](https://github.com/nicolascavallin/htestapp/commit/8d72d2e5d63b7a86b0378ed114b217dff7256da2))
+* Release/3.0.2 (#69) ([f5d60db](https://github.com/nicolascavallin/htestapp/commit/f5d60dbac9924e0686a4b4bc7619cd7f1997dcc0)), closes [#69](https://github.com/nicolascavallin/htestapp/issues/69)
+* update ([f1ae77c](https://github.com/nicolascavallin/htestapp/commit/f1ae77ca4ad0f0f6c9960b4156f96fc722c270df))
+* off push action ([9438dd1](https://github.com/nicolascavallin/htestapp/commit/9438dd1d8578cb50addffdb4b4ae1cf540dfbf55))
+
 ### [3.0.2](https://github.com/nicolascavallin/htestapp/compare/3.0.0...3.0.2) (2023-03-23)
 
 
