@@ -1,6 +1,6 @@
 {
   "name": "htestapp",
-  "version": "9.0.0",
+  "version": "10.0.0-rc.0",
   "private": true,
   "scripts": {
     "android": "react-native run-android",
