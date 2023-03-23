@@ -4,11 +4,13 @@
     "tokenRef": "GH_TOKEN"
   },
   "hooks": {
-    "after:bump": "version_string=$(echo \"${version}\" | sed -E 's/([0-9]+\\.[0-9]+\\.[0-9]+).*$/\\1/') && yarn react-native-version --never-amend && git checkout -b release/$version_string"
+    "before:init": "echo ${version}"
   },
   "git": {
-    "push": true,
-    "commit": true,
-    "commitMessage": "prerelease: v${version}"
+    "push": false,
+    "commit": false,
+    "commitMessage": "prerelease: v${version}",
+    "requireCleanWorkingDir": false,
+    "requireUpstream": false
   }
 }
