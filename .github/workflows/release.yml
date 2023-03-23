@@ -44,4 +44,21 @@ jobs:
 
       - name: Bump version
         run: |
-          yarn release --config .release-it.release.json --ci
+          # Extract version number from input string
+          version=$(echo "${{ github.ref_name }}" | grep -oE '[0-9]+\.[0-9]+\.[0-9]+')
+
+          # Split version number into three components
+          major=$(echo $version | cut -d. -f1)
+          minor=$(echo $version | cut -d. -f2)
+          patch=$(echo $version | cut -d. -f3)
+
+          # Determine type of bump based on version components
+          if [[ $patch -gt 0 ]]; then
+            bump="patch"
+          elif [[ $minor -gt 0 ]]; then
+            bump="minor"
+          else
+            bump="major"
+          fi
+
+          yarn release $bump --config .release-it.release.json --ci

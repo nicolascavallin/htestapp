@@ -4,11 +4,11 @@ on:
   workflow_dispatch:
     inputs:
       hash:
-        description: 'Commit hash to release.'
+        description: 'Commit hash to release'
         required: false
         default: ''
       bump:
-        description: 'Choose your version bump.'
+        description: 'Choose your version bump'
         required: true
         default: 'patch'
         type: choice
@@ -17,7 +17,7 @@ on:
           - minor
           - major
       tag:
-        description: 'Tag name.'
+        description: 'Tag name'
         required: true
         default: 'rc'
         type: choice
@@ -66,4 +66,4 @@ jobs:
 
       - name: Bump version
         run: |
-          yarn release ${{ inputs.bump }} --preRelease=rc --config .release-it.pre.json --ci
+          yarn release ${{ inputs.bump }} --preRelease=${{ inputs.tag }} --config .release-it.pre.json --ci
