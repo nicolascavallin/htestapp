@@ -11,7 +11,8 @@
   "git": {
     "push": true,
     "commitMessage": "release: v${version}",
-    "tag": true
+    "tag": true,
+    "tagName": "v${version}"
   },
   "plugins": {
     "@release-it/conventional-changelog": {
