@@ -1,5 +1,9 @@
 
 
+## 2.1.0 (2023-03-23)
+
+* specific commit for 2.1.0 ([1b2945e](https://github.com/nicolascavallin/htestapp/commit/1b2945e))
+
 ## <small>2.0.1 (2023-03-23)</small>
 
 * prerelease: v2.0.0-rc.0 (#20) ([353c901](https://github.com/nicolascavallin/htestapp/commit/353c901)), closes [#20](https://github.com/nicolascavallin/htestapp/issues/20)
