@@ -4,11 +4,12 @@
     "tokenRef": "GH_TOKEN"
   },
   "hooks": {
-    "before:init": "echo ${version}"
+    "before:init": "echo ${latestVersion}"
   },
   "git": {
     "push": false,
     "commit": false,
+    "tag": false,
     "commitMessage": "prerelease: v${version}",
     "requireCleanWorkingDir": false,
     "requireUpstream": false
