@@ -1,5 +1,7 @@
 
 
+## 3.0.0 (2023-03-23)
+
 ## 2.1.0 (2023-03-23)
 
 * specific commit for 2.1.0 ([1b2945e](https://github.com/nicolascavallin/htestapp/commit/1b2945e))
