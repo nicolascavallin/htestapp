@@ -17,11 +17,6 @@ jobs:
           fetch-depth: '0'
           token: ${{ env.GH_TOKEN }}
 
-      - name: Specific Commit
-        if: ${{ github.event.inputs.hash != '' }}
-        run: |
-          git reset --hard ${{ github.event.inputs.hash }}
-
       - name: Check branch
         run: |
           if [ "${{ env.BRANCH_NAME }}" =~ "release/" ]; then

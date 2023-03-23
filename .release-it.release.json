@@ -4,13 +4,12 @@
     "tokenRef": "GH_TOKEN"
   },
   "hooks": {
-    "after:bump": "yarn react-native-version --never-amend && npx auto-changelog -p",
+    "after:bump": "yarn react-native-version --never-amend",
     "after:release": "version_string=$(echo \"${version}\" | sed -E 's/([0-9]+\\.[0-9]+\\.[0-9]+).*$/\\1/') && gh pr create --base develop --head release/$version_string --title 'Release ${version}' --body 'Release ${version}' && gh pr create --base master --head release/$version_string --title 'Release ${version}' --body 'Release ${version}'"
   },
   "git": {
     "push": true,
     "commitMessage": "Release v${version}",
-    "tag": true,
-    "changelog": "npx auto-changelog --stdout --commit-limit false -u --template https://raw.githubusercontent.com/release-it/release-it/main/templates/changelog-compact.hbs"
+    "tag": true
   }
 }
