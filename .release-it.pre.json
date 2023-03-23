@@ -10,6 +10,6 @@
     "push": true,
     "commit": true,
     "commitMessage": "prerelease: v${version}",
-    "tag": false
+    "tag": true
   }
 }
