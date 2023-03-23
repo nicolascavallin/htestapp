@@ -1,5 +1,15 @@
 
 
+### [2.2.3](https://github.com/nicolascavallin/htestapp/compare/2.2.0...2.2.3) (2023-03-23)
+
+
+### Other PRs
+
+* feature 3444 ([8463bab](https://github.com/nicolascavallin/htestapp/commit/8463babdd69e9ef01bb6887d4f1ba375528e4b37))
+* no draft ([910e9f0](https://github.com/nicolascavallin/htestapp/commit/910e9f03e74a94bb90b95bf7849683b2d81730b0))
+* feature 3 ([09e28dc](https://github.com/nicolascavallin/htestapp/commit/09e28dc8686a4dee5bd9df7af128b226c4dcd950))
+* some stupid feature 2 ([8109ced](https://github.com/nicolascavallin/htestapp/commit/8109ced20b9c3236f7bc99afeaf5f3eae03c858e))
+
 ### [2.2.2](https://github.com/nicolascavallin/htestapp/compare/2.2.0...2.2.2) (2023-03-23)
 
 
