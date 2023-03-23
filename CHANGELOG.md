@@ -1,5 +1,7 @@
 
 
+## [2.5.0](https://github.com/nicolascavallin/htestapp/compare/2.4.0...2.5.0) (2023-03-23)
+
 ## [2.4.0](https://github.com/nicolascavallin/htestapp/compare/2.3.0...2.4.0) (2023-03-23)
 
 ## [2.3.0](https://github.com/nicolascavallin/htestapp/compare/2.2.0...2.3.0) (2023-03-23)
