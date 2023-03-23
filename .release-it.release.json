@@ -10,6 +10,8 @@
   },
   "git": {
     "push": true,
+    "commit": true,
+    "tag": true,
     "commitMessage": "release: v${version}",
     "requireCleanWorkingDir": false,
     "requireUpstream": false

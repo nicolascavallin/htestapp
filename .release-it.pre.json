@@ -9,8 +9,10 @@
   "git": {
     "push": true,
     "commit": true,
+    "tag": false,
     "commitMessage": "prerelease: v${version}",
     "requireCleanWorkingDir": false,
-    "requireUpstream": false
+    "requireUpstream": false,
+    "changelog": null
   }
 }
