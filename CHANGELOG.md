@@ -1,5 +1,13 @@
 
 
+### [3.0.2](https://github.com/nicolascavallin/htestapp/compare/3.0.0...3.0.2) (2023-03-23)
+
+
+### Other PRs
+
+* update ([f1ae77c](https://github.com/nicolascavallin/htestapp/commit/f1ae77ca4ad0f0f6c9960b4156f96fc722c270df))
+* off push action ([9438dd1](https://github.com/nicolascavallin/htestapp/commit/9438dd1d8578cb50addffdb4b4ae1cf540dfbf55))
+
 ### [3.0.1](https://github.com/nicolascavallin/htestapp/compare/3.0.0...3.0.1) (2023-03-23)
 
 ## [3.0.0](https://github.com/nicolascavallin/htestapp/compare/2.5.0...3.0.0) (2023-03-23)
