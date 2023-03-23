@@ -17,7 +17,7 @@ on:
           - minor
           - major
       tag:
-        description: 'Tag name'
+        description: 'Type of pre-release'
         required: true
         default: 'rc'
         type: choice
