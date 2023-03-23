@@ -1,6 +1,6 @@
 {
   "github": {
-    "preRelease": true,
+    "release": false,
     "tokenRef": "GH_TOKEN"
   },
   "hooks": {

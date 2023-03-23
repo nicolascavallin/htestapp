@@ -1,6 +1,8 @@
 {
   "github": {
     "release": true,
+    "releaseName": "Release v${version}",
+    "draft": true,
     "tokenRef": "GH_TOKEN"
   },
   "hooks": {
