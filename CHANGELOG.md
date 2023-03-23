@@ -1,5 +1,12 @@
 
 
+### [2.2.1](https://github.com/nicolascavallin/htestapp/compare/2.2.0...2.2.1) (2023-03-23)
+
+
+### Other PRs
+
+* some stupid feature 2 ([8109ced](https://github.com/nicolascavallin/htestapp/commit/8109ced20b9c3236f7bc99afeaf5f3eae03c858e))
+
 ## [2.2.0](https://github.com/nicolascavallin/htestapp/compare/2.1.0...2.2.0) (2023-03-23)
 
 
