@@ -1,5 +1,7 @@
 
 
+## [2.1.0](https://github.com/nicolascavallin/htestapp/compare/2.0.1...2.1.0) (2023-03-23)
+
 ### 2.0.1 (2023-03-23)
 
 

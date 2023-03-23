@@ -7,11 +7,12 @@
   },
   "hooks": {
     "after:bump": "yarn react-native-version --never-amend",
-    "after:release": "version_string=$(echo \"${version}\" | sed -E 's/([0-9]+\\.[0-9]+\\.[0-9]+).*$/\\1/') && gh pr create --base develop --head release/$version_string --title 'Release ${version}' --body 'Release ${version}'"
+    "after:release": "version_string=$(echo \"${version}\" | sed -E 's/([0-9]+\\.[0-9]+\\.[0-9]+).*$/\\1/')"
   },
   "git": {
     "push": true,
-    "commitMessage": "release: v${version}"
+    "commitMessage": "release: v${version}",
+    "requireCleanWorkingDir": false
   },
   "plugins": {
     "@release-it/conventional-changelog": {
