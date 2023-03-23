@@ -13,7 +13,7 @@
     "push": true,
     "commitMessage": "release: v${version}",
     "requireCleanWorkingDir": false,
-    "requireUpstream": true
+    "requireUpstream": false
   },
   "plugins": {
     "@release-it/conventional-changelog": {
