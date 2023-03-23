@@ -22,8 +22,10 @@ jobs:
 
       - name: Check package.json version
         run: |
-          if [[ "jq -r '.version' package.json" =~ '-' ]]; then
-            echo "is_prerelease=true" >> "$GITHUB_OUTPUT"
+          if [[ "$(jq -r '.version' package.json)" =~ '-' ]]; then
+            echo "is_prerelease=true" >> $GITHUB_ENV
+          else
+            echo "is_prerelease=false" >> $GITHUB_ENV
           fi
 
       - name: Install libraries and run linters and unit tests
