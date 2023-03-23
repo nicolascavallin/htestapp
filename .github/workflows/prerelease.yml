@@ -16,10 +16,17 @@ on:
           - patch
           - minor
           - major
+      tag:
+        description: 'Tag name.'
+        required: true
+        default: 'rc'
+        type: choice
+        options:
+          - rc
 
 env:
   BRANCH_NAME: ${{ github.ref_name }}
-  # GH_TOKEN: ${{ secrets.GH_AUTH_TOKEN }}
+  GH_TOKEN: ${{ secrets.GH_AUTH_TOKEN }}
 
 jobs:
   run-build-on-bitrise:
@@ -30,7 +37,7 @@ jobs:
         uses: actions/checkout@v3
         with:
           fetch-depth: '0'
-          # token: ${{ env.GH_TOKEN }}
+          token: ${{ env.GH_TOKEN }}
 
       - name: Specific Commit
         if: ${{ github.event.inputs.hash != '' }}
