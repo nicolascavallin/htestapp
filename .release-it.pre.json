@@ -9,7 +9,7 @@
   "git": {
     "push": true,
     "commit": true,
-    "commitMessage": "prerelease: v${version}",
+    "commitMessage": "Pre-release v${version}",
     "tag": false
   }
 }

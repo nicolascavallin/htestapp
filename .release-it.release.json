@@ -9,12 +9,26 @@
   },
   "git": {
     "push": true,
-    "commitMessage": "release: Release v${version}",
+    "commitMessage": "Release v${version}",
     "tag": true
   },
   "plugins": {
     "@release-it/conventional-changelog": {
-      "infile": "CHANGELOG.md"
+      "infile": "CHANGELOG.md",
+      "preset": {
+        "name": "conventionalcommits",
+        "types": [
+          {
+            "type": "feat",
+            "section": "Features"
+          },
+          {
+            "type": "fix",
+            "section": "Bug Fixes"
+          },
+          {}
+        ]
+      }
     }
   }
 }
