@@ -1,5 +1,7 @@
 
 
+### [3.0.1](https://github.com/nicolascavallin/htestapp/compare/3.0.0...3.0.1) (2023-03-23)
+
 ## [3.0.0](https://github.com/nicolascavallin/htestapp/compare/2.5.0...3.0.0) (2023-03-23)
 
 ## [2.5.0](https://github.com/nicolascavallin/htestapp/compare/2.4.0...2.5.0) (2023-03-23)
