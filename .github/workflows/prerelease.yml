@@ -72,7 +72,7 @@ jobs:
           minor=${version_parts[1]}
           patch=${version_parts[2]}
 
-          bump="major"
+          bump=${{ inputs.bump }}
 
           if [ "$bump" == "major" ]; then
             major=$((major + 1))
