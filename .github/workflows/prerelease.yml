@@ -65,7 +65,7 @@ jobs:
           git config --global --add --bool push.autoSetupRemote true
 
       - name: Set release command as env variable
-        run: echo "export RELEASE_COMMAND='yarn release ${{ inputs.bump }} --preRelease=${{ inputs.tag }} --release-version | sed 's/-.*//'" >> $GITHUB_ENV"
+        run: echo "export RELEASE_COMMAND=\"yarn release ${{ inputs.bump }} --preRelease=${{ inputs.tag }} --release-version | sed 's/-.*//'\"" >> $GITHUB_ENV
 
       - name: Create release branch
         env:
