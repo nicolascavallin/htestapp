@@ -69,6 +69,7 @@ jobs:
           NEXT_VERSION=$(yarn release ${{ inputs.bump }} --preRelease=${{ inputs.tag }} --release-version | sed 's/-.*//')
           git stash save
           git checkout -b release/${NEXT_VERSION}
+          git stash pop
           echo "NEXT_VERSION=${NEXT_VERSION}" >> $GITHUB_ENV
 
       - name: Bump version
