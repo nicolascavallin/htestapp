@@ -21,10 +21,8 @@
         "from": "6.2.0"
       },
       "context": {
-        "linkCompare": true
-      },
-      "parserOpts": {
-        "mergePattern": "^Merge pull request #(\\d+) from (.*)$"
+        "linkCompare": true,
+        "previousTag": "6.2.0"
       },
       "preset": {
         "name": "conventionalcommits",
