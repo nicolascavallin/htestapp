@@ -138,8 +138,8 @@ android {
         applicationId "com.htestapp"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 86
-        versionName "6.0.0-rc.0"
+        versionCode 87
+        versionName "6.0.0-rc.1"
         buildConfigField "boolean", "IS_NEW_ARCHITECTURE_ENABLED", isNewArchitectureEnabled().toString()
 
         if (isNewArchitectureEnabled()) {
