@@ -23,6 +23,7 @@
       "parserOpts": {
         "mergePattern": "^Merge pull request #(\\d+) from (.*)$"
       },
+      "previousTag": "6.2.0",
       "preset": {
         "name": "conventionalcommits",
         "types": [
