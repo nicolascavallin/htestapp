@@ -18,11 +18,11 @@
     "@release-it/conventional-changelog": {
       "ignoreRecommendedBump": true,
       "gitRawCommitsOpts": {
-        "from": "8.0.0"
+        "from": "9.0.0"
       },
       "context": {
         "linkCompare": true,
-        "previousTag": "8.0.0"
+        "previousTag": "9.0.0"
       },
       "preset": {
         "name": "conventionalcommits",
