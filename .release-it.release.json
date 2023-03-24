@@ -6,15 +6,13 @@
   },
   "hooks": {
     "after:bump": "yarn react-native-version --never-amend",
-    "after:release": "version_string=$(echo \"${version}\" | sed -E 's/([0-9]+\\.[0-9]+\\.[0-9]+).*$/\\1/')"
+    "after:release": "gh pr create --base develop --head release/${version} --title 'Release ${version}' --body 'Release ${version}\n${changelog}'"
   },
   "git": {
     "push": true,
     "commit": true,
     "tag": true,
-    "commitMessage": "release: v${version}",
-    "requireCleanWorkingDir": false,
-    "requireUpstream": false
+    "commitMessage": "release: v${version}"
   },
   "plugins": {
     "@release-it/conventional-changelog": {
@@ -29,6 +27,14 @@
           {
             "type": "fix",
             "section": "Bug Fixes"
+          },
+          {
+            "type": "docs",
+            "section": "Documentation"
+          },
+          {
+            "type": "test",
+            "section": "Tests"
           },
           {
             "type": "",

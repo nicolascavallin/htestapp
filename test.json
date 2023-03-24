@@ -1,0 +1,14 @@
+{
+  "github": {
+    "release": false
+  },
+  "hooks": {},
+  "git": {
+    "push": false,
+    "commit": false,
+    "tag": false,
+    "commitMessage": "prerelease: v${version}",
+    "changelog": null,
+    "requireCleanWorkingDir": false
+  }
+}

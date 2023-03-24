@@ -1,53 +1,53 @@
-# name: Auto Pre-release push
+name: Auto Pre-release push
 
-# on:
-#   push:
-#     branches:
-#       - release/*
+on:
+  push:
+    branches:
+      - release/*
 
-# env:
-#   BRANCH_NAME: ${{ github.ref_name }}
-#   GH_TOKEN: ${{ secrets.GH_AUTH_TOKEN }}
+env:
+  BRANCH_NAME: ${{ github.ref_name }}
+  GH_TOKEN: ${{ secrets.GH_AUTH_TOKEN }}
 
-# jobs:
-#   run-build-on-bitrise:
-#     name: Pre-release push
-#     runs-on: ubuntu-latest
-#     if: "github.actor != 'AlbertoLinares'"
-#     steps:
-#       - name: Checkout Git Repo
-#         uses: actions/checkout@v3
-#         with:
-#           fetch-depth: '0'
-#           token: ${{ env.GH_TOKEN }}
+jobs:
+  run-build-on-bitrise:
+    name: Pre-release push
+    runs-on: ubuntu-latest
+    if: "github.actor != 'AlbertoLinares'"
+    steps:
+      - name: Checkout Git Repo
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: '0'
+          token: ${{ env.GH_TOKEN }}
 
-#       - name: Check package.json version
-#         run: |
-#           if [[ "$(jq -r '.version' package.json)" =~ '-' ]]; then
-#             echo "is_prerelease=true" >> $GITHUB_ENV
-#           else
-#             echo "is_prerelease=false" >> $GITHUB_ENV
-#           fi
+      - name: Check package.json version
+        run: |
+          if [[ "$(jq -r '.version' package.json)" =~ '-' ]]; then
+            echo "is_prerelease=true" >> $GITHUB_ENV
+          else
+            echo "is_prerelease=false" >> $GITHUB_ENV
+          fi
 
-#       - name: Install libraries and run linters and unit tests
-#         if: ${{ env.is_prerelease == 'true' }}
-#         run: |
-#           yarn install
-#           yarn typecheck
-#           yarn lint
-#           yarn test:unit
+      - name: Install libraries and run linters and unit tests
+        if: ${{ env.is_prerelease == 'true' }}
+        run: |
+          yarn install
+          yarn typecheck
+          yarn lint
+          yarn test:unit
 
-#       - name: Setup Git
-#         if: ${{ env.is_prerelease == 'true' }}
-#         run: |
-#           git config user.name "${GITHUB_ACTOR}"
-#           git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
+      - name: Setup Git
+        if: ${{ env.is_prerelease == 'true' }}
+        run: |
+          git config user.name "${GITHUB_ACTOR}"
+          git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
 
-#       - name: Bump version
-#         if: ${{ env.is_prerelease == 'true' }}
-#         run: |
-#           yarn release --preRelease --config .release-it.pre-push.json --ci
+      - name: Bump version
+        if: ${{ env.is_prerelease == 'true' }}
+        run: |
+          yarn release --preRelease --config .release-it.pre.json --ci
 
-#       - name: Bitrise Build Production
-#         run: |
-#           echo "Triggering Bitrise build for production"
+      - name: Bitrise Build Production
+        run: |
+          echo "Triggering Bitrise build for production"
