@@ -62,7 +62,32 @@ jobs:
         run: |
           git config user.name "${GITHUB_ACTOR}"
           git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
-          git config --global --add --bool push.autoSetupRemote true"
+          git config --global --add --bool push.autoSetupRemote true
+
+          current_version=$(jq -r '.version' package.json)
+
+          IFS='.' read -ra version_parts <<< "$current_version"
+
+          major=${version_parts[0]}
+          minor=${version_parts[1]}
+          patch=${version_parts[2]}
+
+          bump="major"
+
+          if [ "$bump" == "major" ]; then
+            major=$((major + 1))
+            minor=0
+            patch=0
+          elif [ "$bump" == "minor" ]; then
+            minor=$((minor + 1))
+            patch=0
+          elif [ "$bump" == "patch" ]; then
+            patch=$((patch + 1))
+          fi
+
+          new_version="$major.$minor.$patch"
+
+          git checkout -b "release/$new_version"
 
       - name: Bump version
         run: |

@@ -3,7 +3,7 @@
     "release": false
   },
   "hooks": {
-    "after:bump": "version_string=$(echo \"${version}\" | sed -E 's/([0-9]+\\.[0-9]+\\.[0-9]+).*$/\\1/') && yarn react-native-version --never-amend && git checkout -b release/$version_string"
+    "after:bump": "yarn react-native-version --never-amend"
   },
   "git": {
     "push": true,

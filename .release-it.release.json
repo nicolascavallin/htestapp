@@ -6,7 +6,7 @@
   },
   "hooks": {
     "after:bump": "yarn react-native-version --never-amend",
-    "after:release": "gh pr create --base develop --head release/${version} --title 'Release ${version}' --body 'Release ${version}\n${changelog}'"
+    "after:release": "gh pr create --base develop --head release/${version} --title 'Release ${version}' --body '${changelog}'"
   },
   "git": {
     "push": true,
@@ -15,8 +15,47 @@
     "commitMessage": "release: v${version}"
   },
   "plugins": {
-    "@release-it/keep-a-changelog": {
-      "filename": "CHANGELOG.md"
+    "@release-it/conventional-changelog": {
+      "ignoreRecommendedBump": true,
+      "context": {
+        "linkCompare": true
+      },
+      "parserOpts": {
+        "mergePattern": "^Merge pull request #(\\d+) from (.*)$"
+      },
+      "preset": {
+        "name": "conventionalcommits",
+        "types": [
+          {
+            "type": "feat",
+            "section": "Features"
+          },
+          {
+            "type": "fix",
+            "section": "Bug Fixes"
+          },
+          {
+            "type": "docs",
+            "section": "Documentation"
+          },
+          {
+            "type": "test",
+            "section": "Tests"
+          },
+          {
+            "type": "",
+            "section": "Other PRs"
+          },
+          {
+            "type": "prerelease",
+            "hidden": true
+          },
+          {
+            "type": "release",
+            "hidden": true
+          }
+        ]
+      }
     }
   }
 }
