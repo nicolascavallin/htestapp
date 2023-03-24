@@ -62,6 +62,10 @@ jobs:
         run: yarn release ${{ inputs.bump }} --preRelease=${{ inputs.tag }} --release-version | sed 's/-.*//'
         id: next_version
 
+      - name: Print yarn output
+        run: |
+          echo "Output: ${{ steps.release.outputs.stdout }}"
+
       - name: Setup Git
         run: |
           git config user.name "${GITHUB_ACTOR}"
