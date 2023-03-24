@@ -58,20 +58,16 @@ jobs:
           yarn lint
           yarn test:unit
 
-      - name: Next Version
-        run: yarn release ${{ inputs.bump }} --preRelease=${{ inputs.tag }} --release-version | sed 's/-.*//'
-        id: next_version
-
-      - name: Print yarn output
-        run: |
-          echo "Output: ${{ steps.release.outputs.stdout }}"
+      - name: Release Version
+        run: yarn release ${{ inputs.bump }} --preRelease=${{ inputs.tag }} --release-version | sed 's/-.*//' > release_version.txt
+        id: release_version
 
       - name: Setup Git
         run: |
           git config user.name "${GITHUB_ACTOR}"
           git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
           git config --global --add --bool push.autoSetupRemote true
-          git checkout -b release/${{ steps.next_version.outputs.stdout }}
+          git checkout -b release/${{ steps.release_version.outputs.release_version }}
 
       - name: Bump version
         run: |
