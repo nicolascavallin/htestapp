@@ -58,17 +58,17 @@ jobs:
           yarn lint
           yarn test:unit
 
+      - name: Next version name
+        run: |
+          NEXT_VERSION=$(yarn release ${{ inputs.bump }} --preRelease=${{ inputs.tag }} --release-version | sed 's/-.*//')
+          echo "NEXT_VERSION=${NEXT_VERSION}" >> $GITHUB_ENV
+
       - name: Setup Git
         run: |
           git config user.name "${GITHUB_ACTOR}"
           git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
           git config --global --add --bool push.autoSetupRemote true
-
-      - name: Release branch name
-        run: |
-          NEXT_VERSION=$(yarn release ${{ inputs.bump }} --preRelease=${{ inputs.tag }} --release-version | sed 's/-.*//')
-          git checkout -b release/${NEXT_VERSION}
-          echo "NEXT_VERSION=${NEXT_VERSION}" >> $GITHUB_ENV
+          git checkout -b release/${{ env.NEXT_VERSION }}
 
       - name: Bump version
         run: |
