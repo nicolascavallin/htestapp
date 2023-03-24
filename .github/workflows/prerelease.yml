@@ -62,20 +62,7 @@ jobs:
         run: |
           git config user.name "${GITHUB_ACTOR}"
           git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
-          git config --global --add --bool push.autoSetupRemote true
-
-      - name: Set release command as env variable
-        run: |
-          echo $(yarn release ${{ inputs.bump }} --preRelease=${{ inputs.tag }} --config .release-it.pre.json --release-version | sed 's/-.*//')
-          return 1
-
-      - name: Create release branch
-        env:
-          RELEASE_COMMAND: ${{ env.RELEASE_COMMAND }}
-        run: |
-          release_version=$(eval $RELEASE_COMMAND)
-          git checkout -b release/$release_version
-          git push --set-upstream origin release/$release_version
+          git config --global --add --bool push.autoSetupRemote true"
 
       - name: Bump version
         run: |

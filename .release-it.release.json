@@ -15,41 +15,8 @@
     "commitMessage": "release: v${version}"
   },
   "plugins": {
-    "@release-it/conventional-changelog": {
-      "infile": "CHANGELOG.md",
-      "preset": {
-        "name": "conventionalcommits",
-        "types": [
-          {
-            "type": "feat",
-            "section": "Features"
-          },
-          {
-            "type": "fix",
-            "section": "Bug Fixes"
-          },
-          {
-            "type": "docs",
-            "section": "Documentation"
-          },
-          {
-            "type": "test",
-            "section": "Tests"
-          },
-          {
-            "type": "",
-            "section": "Other PRs"
-          },
-          {
-            "type": "prerelease",
-            "hidden": true
-          },
-          {
-            "type": "release",
-            "hidden": true
-          }
-        ]
-      }
+    "@release-it/keep-a-changelog": {
+      "filename": "CHANGELOG.md"
     }
   }
 }
