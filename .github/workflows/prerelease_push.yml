@@ -46,7 +46,7 @@ jobs:
       - name: Bump version
         if: ${{ env.is_prerelease == 'true' }}
         run: |
-          yarn release --preRelease --config .release-it.pre.json --ci
+          yarn release --preRelease --config .release-it.push.json --ci
 
       - name: Bitrise Build Production
         run: |
