@@ -10,6 +10,7 @@
     "commit": true,
     "tag": false,
     "commitMessage": "prerelease: v${version}",
-    "changelog": null
+    "changelog": null,
+    "requireUpstream": false
   }
 }
