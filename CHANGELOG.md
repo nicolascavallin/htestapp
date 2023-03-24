@@ -1,5 +1,41 @@
 
 
+## [6.0.0](https://github.com/nicolascavallin/htestapp/compare/3.0.0...6.0.0) (2023-03-24)
+
+
+### Other PRs
+
+* another hotfix exclusive for v6 ([f3252e4](https://github.com/nicolascavallin/htestapp/commit/f3252e4f92a2c895dd630c27c67ee0128f63ccfe))
+* hotfix exclusive for v6 ([d1da8a3](https://github.com/nicolascavallin/htestapp/commit/d1da8a3d2937fc00fc21fb25b6c6ba992d9d0928))
+* new fix for v6 ([0ae32ac](https://github.com/nicolascavallin/htestapp/commit/0ae32ac3f71acd0ad168191c3424dec7e75d0c74))
+* new feature for v6 ([2c9738c](https://github.com/nicolascavallin/htestapp/commit/2c9738cf29ef2ba4ae815b18cc7a5187d1426ce9))
+* Release 5.0.0 (#71) ([77cd160](https://github.com/nicolascavallin/htestapp/commit/77cd160308a3424c6455c12d3c88d2649e5205e6)), closes [#71](https://github.com/nicolascavallin/htestapp/issues/71)
+* again ([0a56786](https://github.com/nicolascavallin/htestapp/commit/0a56786d064164733cded6e7982c7c21cf692e32))
+* update next version10 ([79d6380](https://github.com/nicolascavallin/htestapp/commit/79d638086a2b82470ba3867d6c5504d16a46daa1))
+* update next version9 ([ad2b127](https://github.com/nicolascavallin/htestapp/commit/ad2b127ab1377be048c491a9dc1fd44b805d3af6))
+* update next version8 ([fc2021a](https://github.com/nicolascavallin/htestapp/commit/fc2021a659d05fb54e0a86a6c1fb5ebdd102c525))
+* update next version7 ([4fa9db0](https://github.com/nicolascavallin/htestapp/commit/4fa9db0aa3db7c92baa3b082fc70484ad4ae4480))
+* update next version6 ([5fd5b21](https://github.com/nicolascavallin/htestapp/commit/5fd5b21f1869746424cb3999824c8ef7889f0343))
+* update next version5 ([3a48331](https://github.com/nicolascavallin/htestapp/commit/3a48331b1691b02c0af334e216bce9cc96d18105))
+* update next version4 ([528c799](https://github.com/nicolascavallin/htestapp/commit/528c799244450355485af9430619925e9ac2efce))
+* update next version3 ([628d97c](https://github.com/nicolascavallin/htestapp/commit/628d97cbdd181a716e7ca88163d24026907aba20))
+* update next version2 ([b47e750](https://github.com/nicolascavallin/htestapp/commit/b47e7509c4ab8f882ca793eee4cd6f5ecfa503df))
+* update next version ([e5b218b](https://github.com/nicolascavallin/htestapp/commit/e5b218b09d6c2215c77bb0bc7012f1e824a21a34))
+* all job done ([5c56e42](https://github.com/nicolascavallin/htestapp/commit/5c56e42d59f82280fccff58b21f5a6b06c43bad7))
+* add sh5 ([89ad23d](https://github.com/nicolascavallin/htestapp/commit/89ad23d9487120364b561584cf1ac23bee0f9656))
+* add sh4 ([36e362a](https://github.com/nicolascavallin/htestapp/commit/36e362a961b115a1d9cc254152e385f5d35f73eb))
+* add sh3 ([ceeeb61](https://github.com/nicolascavallin/htestapp/commit/ceeeb61aa3c4b2c5217fba698f45b6113b45b91f))
+* add sh3 ([26e43ec](https://github.com/nicolascavallin/htestapp/commit/26e43ecb169dd9b621ce7d65e0a835afce7408c1))
+* add sh2 ([c5b496d](https://github.com/nicolascavallin/htestapp/commit/c5b496dac4be0009ed3abf1e47f47fbab2f7ed73))
+* add sh ([3344535](https://github.com/nicolascavallin/htestapp/commit/3344535c456b7c8a8eff3bc716df2c234923cd7a))
+* Release/4.0.0 (#70) ([3a16c17](https://github.com/nicolascavallin/htestapp/commit/3a16c1789355fb3f41b8dced205ec59a5054517a)), closes [#70](https://github.com/nicolascavallin/htestapp/issues/70)
+* feature 3 4.0 ([3fe41ed](https://github.com/nicolascavallin/htestapp/commit/3fe41edea0405bbb7b9c6e6389ec356159f3f5e7))
+* feature 2 4.0 ([bc6c6ea](https://github.com/nicolascavallin/htestapp/commit/bc6c6eae20b600477bf2a7dd17d69f1c48fec43f))
+* feature 1 4.0 ([8d72d2e](https://github.com/nicolascavallin/htestapp/commit/8d72d2e5d63b7a86b0378ed114b217dff7256da2))
+* Release/3.0.2 (#69) ([f5d60db](https://github.com/nicolascavallin/htestapp/commit/f5d60dbac9924e0686a4b4bc7619cd7f1997dcc0)), closes [#69](https://github.com/nicolascavallin/htestapp/issues/69)
+* update ([f1ae77c](https://github.com/nicolascavallin/htestapp/commit/f1ae77ca4ad0f0f6c9960b4156f96fc722c270df))
+* off push action ([9438dd1](https://github.com/nicolascavallin/htestapp/commit/9438dd1d8578cb50addffdb4b4ae1cf540dfbf55))
+
 ## [5.0.0](https://github.com/nicolascavallin/htestapp/compare/3.0.0...5.0.0) (2023-03-24)
 
 
