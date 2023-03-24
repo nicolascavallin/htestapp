@@ -56,7 +56,7 @@ jobs:
             bump="major"
           fi
 
-          yarn release $bump --config .release-it.release.json --git.tagExclude='*[-]*' --ci
+          yarn release $bump --config .release-it.release.json --ci
 
       - name: Bitrise Build Production
         run: |
