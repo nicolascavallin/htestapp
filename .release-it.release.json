@@ -16,13 +16,14 @@
   },
   "plugins": {
     "@release-it/conventional-changelog": {
+      "infile": "CHANGELOG.md",
       "ignoreRecommendedBump": true,
       "gitRawCommitsOpts": {
-        "from": "11.0.0"
+        "from": "11.1.0"
       },
       "context": {
         "linkCompare": true,
-        "previousTag": "11.0.0"
+        "previousTag": "11.1.0"
       },
       "preset": {
         "name": "conventionalcommits",
