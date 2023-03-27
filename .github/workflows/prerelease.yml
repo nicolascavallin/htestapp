@@ -35,12 +35,10 @@ jobs:
     steps:
       - name: Check for release branch
         run: |
-          if gh api /repos/${{ github.repository }}/git/ref/heads/release/* >/dev/null 2>&1; then
+          if git ls-remote --heads origin release/* | grep -q 'release/'; then
             echo "There is an active release branch, you can't create a new release."
             exit 1
           fi
-        env:
-          GITHUB_TOKEN: ${{ env.GH_TOKEN }}
 
       - name: Checkout Git Repo
         uses: actions/checkout@v3
