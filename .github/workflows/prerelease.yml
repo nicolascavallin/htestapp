@@ -33,25 +33,25 @@ jobs:
     name: Pre-release
     runs-on: ubuntu-latest
     steps:
-      - name: Check for release branch
-        run: |
-          if git ls-remote --heads origin release/* | grep -q 'release/'; then
-            echo "There is an active release branch, you can't create a new release."
-            exit 1
-          fi
-
       - name: Checkout Git Repo
         uses: actions/checkout@v3
         with:
           fetch-depth: '0'
           token: ${{ env.GH_TOKEN }}
 
+      - name: Check existing release branch
+        run: |
+          if git ls-remote --heads origin release/* | grep -q 'release/'; then
+            echo "There is an active release branch, you can't create a new release."
+            exit 1
+          fi
+
       - name: Specific Commit
         if: ${{ github.event.inputs.hash != '' }}
         run: |
           git reset --hard ${{ github.event.inputs.hash }}
 
-      - name: Check branch
+      - name: Check "develop" branch
         run: |
           if [ "${{ env.BRANCH_NAME }}" != "develop" ]; then
             echo "Branch name is not develop"
