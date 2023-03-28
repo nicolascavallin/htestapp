@@ -1,5 +1,14 @@
 
 
+## [16.0.0](https://github.com/nicolascavallin/htestapp/compare/15.0.1...16.0.0) (2023-03-28)
+
+
+### Other PRs
+
+* Release 15.0.1 (#86) ([4e56280](https://github.com/nicolascavallin/htestapp/commit/4e56280d8ec069244efe5e90dd1c41f69e21a0ba)), closes [#86](https://github.com/nicolascavallin/htestapp/issues/86)
+* hola2 ([28cf9e2](https://github.com/nicolascavallin/htestapp/commit/28cf9e2aab99fc95cbdc66b966aabd43d3bb78c0))
+* hola ([478a754](https://github.com/nicolascavallin/htestapp/commit/478a754f8bbfafe667b9fd01cc50696a45fba701))
+
 ### [15.0.1](https://github.com/nicolascavallin/htestapp/compare/14.0.0...15.0.1) (2023-03-28)
 
 
