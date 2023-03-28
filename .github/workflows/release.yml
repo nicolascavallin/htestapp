@@ -17,9 +17,9 @@ jobs:
           fetch-depth: '0'
           token: ${{ env.GH_TOKEN }}
 
-      - name: Check branch
+      - name: Check if branch is release
         run: |
-          if [[ "${{ env.BRANCH_NAME }}" =~ release/ ]]; then
+          if [[ ${{ env.BRANCH_NAME }} != "release/*" ]]; then
             echo "Origin branch must be a release/* one"
             exit 1
           fi
