@@ -1,5 +1,12 @@
 
 
+## [17.0.0](https://github.com/nicolascavallin/htestapp/compare/16.0.0...17.0.0) (2023-03-28)
+
+
+### Other PRs
+
+* Release 16.0.0 (#87) ([9dd47d4](https://github.com/nicolascavallin/htestapp/commit/9dd47d439ff686fa694607d20ccbafe424b64f56)), closes [#87](https://github.com/nicolascavallin/htestapp/issues/87)
+
 ## [16.0.0](https://github.com/nicolascavallin/htestapp/compare/15.0.1...16.0.0) (2023-03-28)
 
 
