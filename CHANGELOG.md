@@ -1,5 +1,13 @@
 
 
+## [17.2.0](https://github.com/nicolascavallin/htestapp/compare/17.1.0...17.2.0) (2023-03-29)
+
+
+### Other PRs
+
+* ya casi ([4f9abbe](https://github.com/nicolascavallin/htestapp/commit/4f9abbea382ab1e242603736d04ff486deea1d1a))
+* Release 17.1.0 (#91) ([44a87f0](https://github.com/nicolascavallin/htestapp/commit/44a87f0c83341bddc3bc5fe5a5541df5e083c2fb)), closes [#91](https://github.com/nicolascavallin/htestapp/issues/91)
+
 ## [17.1.0](https://github.com/nicolascavallin/htestapp/compare/17.0.0...17.1.0) (2023-03-29)
 
 
