@@ -1,5 +1,21 @@
 
 
+## [17.1.0](https://github.com/nicolascavallin/htestapp/compare/17.0.0...17.1.0) (2023-03-29)
+
+
+### Other PRs
+
+* hotfix on release ([0a9246b](https://github.com/nicolascavallin/htestapp/commit/0a9246bea797970db332a0df93ec78904c67ed54))
+* end5 ([42968b0](https://github.com/nicolascavallin/htestapp/commit/42968b0deb4f52e5f57e343777dfef7c719d89bd))
+* end4 ([37f25ad](https://github.com/nicolascavallin/htestapp/commit/37f25adc916072d9c5556a68a98df3b9f9bb12d7))
+* end3 ([55aac39](https://github.com/nicolascavallin/htestapp/commit/55aac39ea7a5a180819503a3d2b10963d02ced23))
+* end2 ([d92f710](https://github.com/nicolascavallin/htestapp/commit/d92f7108763b5c42257c6235f04f1d7b53fd7b5d))
+* end ([ff2a469](https://github.com/nicolascavallin/htestapp/commit/ff2a46957691f49bb5d84346743bb67d0c608bc0))
+* fix2 ([1b25a5a](https://github.com/nicolascavallin/htestapp/commit/1b25a5a70aa28eca74d46ac262c8a3f0b9948522))
+* fix ([697b73e](https://github.com/nicolascavallin/htestapp/commit/697b73e7ea366f660cf52e6781a50a2d01e48c02))
+* github sha ([daa51aa](https://github.com/nicolascavallin/htestapp/commit/daa51aad1f788f80978f8ca8b15cf0a2904af04e))
+* Release 17.0.0 (#89) ([7f19387](https://github.com/nicolascavallin/htestapp/commit/7f1938727caa86aa13d1f43d25da269101cc502e)), closes [#89](https://github.com/nicolascavallin/htestapp/issues/89)
+
 ## [17.0.0](https://github.com/nicolascavallin/htestapp/compare/16.0.0...17.0.0) (2023-03-28)
 
 
