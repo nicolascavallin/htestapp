@@ -51,3 +51,4 @@ jobs:
       - name: Bitrise Build Production
         run: |
           echo "Triggering Bitrise build for production"
+          echo "GitHub SHA ${{ github.sha }}"
