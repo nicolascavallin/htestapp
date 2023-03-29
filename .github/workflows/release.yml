@@ -62,3 +62,4 @@ jobs:
         run: |
           echo "Triggering Bitrise build for production"
           echo "GitHub SHA ${{ github.sha }}"
+          echo "GitHub Branch ${{ env.BRANCH_NAME }}"

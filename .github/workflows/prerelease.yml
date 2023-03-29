@@ -94,6 +94,8 @@ jobs:
 
           new_version="$major.$minor.$patch"
 
+          echo "BUILD_BRANCH_NAME=release/$new_version" >> "$GITHUB_OUTPUT"
+
           git checkout -b "release/$new_version"
 
           updated_json=$(jq --arg current_version "$current_version" '.plugins."@release-it/conventional-changelog".gitRawCommitsOpts.from = $current_version | .plugins."@release-it/conventional-changelog".context.previousTag = $current_version' .release-it.release.json)
@@ -110,3 +112,6 @@ jobs:
         run: |
           echo "Triggering Bitrise build for production"
           echo "GitHub SHA ${{ github.sha }}"
+          echo "GitHub Branch ${{ env.BRANCH_NAME }}"
+          echo "Real branch ${{ env.BUILD_BRANCH_NAME }}"
+          echo "Real Hash " git rev-parse ${{ env.BUILD_BRANCH_NAME }}
