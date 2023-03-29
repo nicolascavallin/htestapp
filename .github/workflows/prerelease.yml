@@ -109,8 +109,11 @@ jobs:
         run: |
           yarn release ${{ inputs.bump }} --preRelease=${{ inputs.tag }} --config .release-it.pre.json --ci
 
+          commit_hash=$(git rev-parse ${{ env.BUILD_BRANCH_NAME }})
+          echo "BUILD_COMMIT_HASH=$commit_hash" >> "$GITHUB_ENV"
+
       - name: Bitrise Build Production
         uses: ./dist6
         with:
-          branch: ${{ env.BUILD_BRANCH_NAME }}
-          commit_hash: $(git rev-parse ${{ env.BUILD_BRANCH_NAME }})
+          branch_name: ${{ env.BUILD_BRANCH_NAME }}
+          commit_hash: ${{ env.BUILD_COMMIT_HASH }}
