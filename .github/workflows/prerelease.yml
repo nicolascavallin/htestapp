@@ -67,8 +67,8 @@ jobs:
 
       - name: Setup Git
         run: |
-          git config user.name "${GITHUB_ACTOR}"
-          git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
+          git config --global user.name "h-bot-mobile"
+          git config --global user.email "116092959+h-bot-mobile@users.noreply.github.com"
           git config --global --add --bool push.autoSetupRemote true
 
           current_version=$(jq -r '.version' package.json)
@@ -93,8 +93,11 @@ jobs:
           fi
 
           new_version="$major.$minor.$patch"
+          new_branch="release/$new_version"
 
-          git checkout -b "release/$new_version"
+          echo "BUILD_BRANCH_NAME=$new_branch" >> "$GITHUB_ENV"
+
+          git checkout -b $new_branch
 
           updated_json=$(jq --arg current_version "$current_version" '.plugins."@release-it/conventional-changelog".gitRawCommitsOpts.from = $current_version | .plugins."@release-it/conventional-changelog".context.previousTag = $current_version' .release-it.release.json)
           echo "$updated_json" > .release-it.release.json
@@ -106,6 +109,11 @@ jobs:
         run: |
           yarn release ${{ inputs.bump }} --preRelease=${{ inputs.tag }} --config .release-it.pre.json --ci
 
+          commit_hash=$(git rev-parse ${{ env.BUILD_BRANCH_NAME }})
+          echo "BUILD_COMMIT_HASH=$commit_hash" >> "$GITHUB_ENV"
+
       - name: Bitrise Build Production
-        run: |
-          echo "Triggering Bitrise build for production"
+        uses: ./dist6
+        with:
+          branch_name: ${{ env.BUILD_BRANCH_NAME }}
+          commit_hash: ${{ env.BUILD_COMMIT_HASH }}

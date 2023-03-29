@@ -33,8 +33,8 @@ jobs:
 
       - name: Setup Git
         run: |
-          git config user.name "${GITHUB_ACTOR}"
-          git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
+          git config --global user.name "h-bot-mobile"
+          git config --global user.email "116092959+h-bot-mobile@users.noreply.github.com"
           git config --global --add --bool push.autoSetupRemote true
 
       - name: Bump version
@@ -58,6 +58,11 @@ jobs:
 
           yarn release $bump --config .release-it.release.json --ci
 
+          commit_hash=$(git rev-parse ${{ env.BRANCH_NAME }})
+          echo "BUILD_COMMIT_HASH=$commit_hash" >> "$GITHUB_ENV"
+
       - name: Bitrise Build Production
-        run: |
-          echo "Triggering Bitrise build for production"
+        uses: ./dist6
+        with:
+          branch_name: ${{ env.BRANCH_NAME }}
+          commit_hash: ${{ env.BUILD_COMMIT_HASH }}

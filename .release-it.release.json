@@ -6,7 +6,7 @@
   },
   "hooks": {
     "after:bump": "yarn react-native-version --never-amend",
-    "after:release": "gh pr create --base develop --head release/${version} --title 'Release ${version}' --body '${changelog}'"
+    "after:release": "gh pr create --base develop --head release/${version} --title 'release: Release ${version}' --body '${changelog}' && gh pr create --base master --head release/${version} --title 'release: Release ${version}' --body '${changelog}'"
   },
   "git": {
     "push": true,
@@ -19,11 +19,11 @@
       "infile": "CHANGELOG.md",
       "ignoreRecommendedBump": true,
       "gitRawCommitsOpts": {
-        "from": "16.0.0"
+        "from": "17.1.0"
       },
       "context": {
         "linkCompare": true,
-        "previousTag": "16.0.0"
+        "previousTag": "17.1.0"
       },
       "preset": {
         "name": "conventionalcommits",
