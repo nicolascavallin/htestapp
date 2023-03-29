@@ -61,5 +61,6 @@ jobs:
       - name: Bitrise Build Production
         run: |
           echo "Triggering Bitrise build for production"
-          echo "GitHub SHA ${{ github.sha }}"
+          commit_hash=$(git rev-parse ${{ env.BUILD_BRANCH_NAME }})
+          echo "GitHub SHA $commit_hash"
           echo "GitHub Branch ${{ env.BRANCH_NAME }}"
