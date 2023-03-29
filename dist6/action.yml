@@ -1,0 +1,12 @@
+name: 'bitrise-build'
+description: 'Set and run build on Bitrise'
+inputs:
+  branch_name:
+    required: true
+    description: 'GitHub branch name to be used as a source for the build'
+  commit_hash:
+    required: true
+    description: 'Commit hash to be used for the build'
+runs:
+  using: 'node16'
+  main: 'index.js'
