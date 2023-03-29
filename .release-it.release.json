@@ -19,11 +19,11 @@
       "infile": "CHANGELOG.md",
       "ignoreRecommendedBump": true,
       "gitRawCommitsOpts": {
-        "from": "17.0.0"
+        "from": "17.1.0"
       },
       "context": {
         "linkCompare": true,
-        "previousTag": "17.0.0"
+        "previousTag": "17.1.0"
       },
       "preset": {
         "name": "conventionalcommits",
